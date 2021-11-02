@@ -1,0 +1,20 @@
+name: docker image
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET 5.0.x
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: '5.0.x'
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: docker build -t dochdotnetapp .
+      - name: Integration test
+        run: docker run -it --rm -p 5000:80 --name dochdotnetapp_int_test dochdotnetapp

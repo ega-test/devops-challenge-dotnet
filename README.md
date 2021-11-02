@@ -38,17 +38,28 @@ You'll need to select a CI/CD tool to complete the challenge. Feel free to use y
 
 *Note: This challenge does NOT require infrastructure provisioning or deployment. This challenge has designed to be possible without incurring any licencing, hosting or tooling costs.*
 
-## Development
+## Solution
+
+Summary: `dochdotnetapp` image is created in the docker action. From there it could be used to deploy to the desired image register to deploy.
 
 - Initial setup
-    - Visual studio 2019 for local building or VSCode for simple Editing
-    - Docker for local image testing
+    - Visual [studio 2019](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16) (will need .NET 5) for local building or [VSCode](https://code.visualstudio.com/Download) for simple Editing
+    - [Docker](https://docs.docker.com/get-docker/) for local image testing
 - CI/CD
     - Choice [github actions](https://docs.github.com/en/actions/quickstart)
     - Actions
         - Build .NET5
             - [Reference](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net)
             - [File](./.github/workflows/net5.yml)
+        - Build docker container and run integration test
+            - Refs
+                - [Docker action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)
+                - [.NET docker images](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-5.0)
+
+### Solution improvements
+
+- Add Code scan tools checks
+- Add 
 
 ## Extra information on challenge
 
