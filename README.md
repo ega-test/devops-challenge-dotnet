@@ -56,10 +56,14 @@ Summary: `dochdotnetapp` image is created in the docker action. From there it co
                 - [Docker action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)
                 - [.NET docker images](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-5.0)
 
+### Solution pending work
+
+- Container image integration test working on github action
+
 ### Solution improvements
 
 - Add Code scan tools checks
-- Add 
+- Add container scan tools checks
 
 ## Extra information on challenge
 

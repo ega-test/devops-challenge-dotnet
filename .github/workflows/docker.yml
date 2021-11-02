@@ -17,4 +17,4 @@ jobs:
       - name: Build
         run: docker build -t dochdotnetapp .
       - name: Integration test
-        run: docker run -it --rm -p 5000:80 --name dochdotnetapp_int_test dochdotnetapp
+        run: docker run --rm -p 5000:80 --name dochdotnetapp_int_test dochdotnetapp; dotnet test --no-restore --verbosity normal --filter "FullyQualifiedname~DevOpsChallenge.SalesApi.IntegrationTests"
