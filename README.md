@@ -1,6 +1,8 @@
 # DevOps Challenge (.NET)
 
-## Introduction :wave:
+## Challenge information
+
+### Introduction :wave:
 
 This challenge utilises the broad range of skills required by a DevOps Engineer. It focuses on DevOps for a .NET 5 application.
 
@@ -16,7 +18,7 @@ The solution should represent best practices, even if the starting solution is l
 
 You'll need .NET 5 and SQL Server Local DB to build and run the application locally. On a Mac or Linux device, you can update the connection string (in `appsettings.Development.json` and `DatabaseContextDesignTimeFactory.cs`) and use Docker to launch SQL Server Developer Edition.
 
-## Scenario :blue_book:
+### Scenario :blue_book:
 
 You're a DevOps Engineer working in a small team to launch a new application. The management team will use the new application to view and report on daily sales data.
 
@@ -24,7 +26,7 @@ The development team have built a new API to ingest sales data from an existing 
 
 *Note: For simplicity of the solution, the API does not require authentication. Don't do this in a real application!*
 
-## Challenge :question:
+### Challenge :question:
 
 You should:
 
@@ -36,7 +38,21 @@ You'll need to select a CI/CD tool to complete the challenge. Feel free to use y
 
 *Note: This challenge does NOT require infrastructure provisioning or deployment. This challenge has designed to be possible without incurring any licencing, hosting or tooling costs.*
 
-## Opportunities (optional) :zap:
+## Development
+
+- Initial setup
+    - Visual studio 2019 for local building or VSCode for simple Editing
+    - Docker for local image testing
+- CI/CD
+    - Choice [github actions](https://docs.github.com/en/actions/quickstart)
+    - Actions
+        - Build .NET5
+            - [Reference](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net)
+            - [File](./.github/workflows/net5.yml)
+
+## Extra information on challenge
+
+### Opportunities (optional) :zap:
 
 You've received feedback on the application from members of the project team. Optionally, fix these issues, or provide instructions back to the developer on the next steps to take:
 
@@ -46,7 +62,7 @@ You've received feedback on the application from members of the project team. Op
 
 3. The database administrator has identified poor query performance when a sale record is retrieved using its transaction ID. They have recommended creating an index.
 
-## Effort :clock5:
+### Effort :clock5:
 
 Spend as much or as little time as you like on this challenge. DevOps Engineers wear many hats :crown:, and there's always more opportunity for change and improvement. **Limit yourself to the time you have. Make the changes that deliver the most value.**
 
