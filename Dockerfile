@@ -15,7 +15,7 @@ RUN mkdir /app
 RUN dotnet publish -c release "./src/DevOpsChallenge.SalesApi/DevOpsChallenge.SalesApi.csproj" -o /app
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/runtime:5.0
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "DevOpsChallenge.SalesApi.dll"]
